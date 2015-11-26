@@ -42,7 +42,7 @@
 
 \HRule \\[0.4cm]
 \textsc{\Large JS Engineering: 3C1 Signals \& Systems}\\[0.25cm]
-\textsc{\large S1: Linear Time Invarient Systems}\\[0.1cm]
+\textsc{\large S1: Linear Time Invariant Systems}\\[0.1cm]
 \HRule \\[0.4cm]
  
 % AUTHORS
@@ -331,7 +331,7 @@ The same is true for the cosine values, whereby the same method was used again w
 1.5 & 2           & 1.16      
 \end{tabular}
 \caption{Cosine System}
-\end{table}
+\end{table}\clearpage
 \subsection{Gain \& Phase as a Function of a Frequency}
 \subsubsection{Completed Sine Input Table for System 1}
 \begin{table}[h]
@@ -357,7 +357,7 @@ Frequency & Frequency & Amplitude & Frequency & Amplitude & Phase Lag & Gain  \\
 \begin{itemize}
 \item Plot a graph of Gain vs Frequency (rad/sec) \& Phase (rad) vs Frequency (rad/sec)
 \begin{itemize}
-\item Both of the graphs exhibit an exponential decay.
+\item Both of the graphs exhibit an exponential decay. As can be also seen, there is an imperfect curve within my graph due to sampling errors from points I have chosen, therefore my results also have an approximate error within them.
 \end{itemize}
 \end{itemize}
 \begin{align*}
@@ -370,23 +370,26 @@ Frequency & Frequency & Amplitude & Frequency & Amplitude & Phase Lag & Gain  \\
 \end{align*}
 \begin{itemize}
 \item How does the system behaviour change with frequency?
+\begin{itemize}
+\item 
+\end{itemize}
 \end{itemize}
 \subsubsection{Frequency Properties}
 \begin{itemize}
 \item Is the effect of the system the same at all frequencies?
 \begin{itemize}
-\item 
+\item The effects of the system are visible the same at all frequencies.
 \end{itemize}
 \item How does the system behaviour change with frequency?
 \begin{itemize}
-\item The table of results was formed from setting the input amplitude at a constant value of 1, and the frequency was adjusted in order to allow us to measure the changes in amplitude of the output with different values of frequency.
+\item The table of results was formed from setting the input amplitude at a constant value of 1, and the frequency was adjusted in order to allow us to measure the changes in amplitude of the output with different values of frequency. As we can see from the first graph, there appears to be an inverse relationship appearing between Gain and Frequency. For low values of frequency, the output amplitude was actually larger than the input, causing a gain value that was greater than 1. The graph begins to level off for higher frequencies, and seems to begin to approach a zero gain value. The proportion at which the gain decreases slows down as frequency is increased.
 \end{itemize}
 \end{itemize}
 \subsubsection{Discussion}
 \begin{itemize}
 \item Discuss the significance of this plot with respect to the effect of system 1 on the Pulse Wave and Speech Signal.
 \begin{itemize}
-\item As we can see from the first graph, there appears to be an inverse relationship appearing between Gain and Frequency. For low values of frequency, the output amplitude was actually larger than the input, causing a gain value that was greater than 1. The graph begins to level off for higher frequencies, and seems to begin to approach a zero gain value. The proportion at which the gain decreases slows down as frequency is increased.
+\item 
 \end{itemize}
 \end{itemize}
 
@@ -394,23 +397,32 @@ Frequency & Frequency & Amplitude & Frequency & Amplitude & Phase Lag & Gain  \\
 \begin{enumerate}
 \item What does frequency and phase mean with respect to a pure sinusoidal signal?
 \begin{itemize}
-\item a
+\item Frequency refers to the number of oscillations per second that occur within the signal generated.
+\item Phase shift refers to an offset through mathematics that is observed graphically by seeing a \emph{delay} in the signal from the phase $\phi$.
 \end{itemize}
 \item How does an LTI system affect a pure sinosoid?
 \begin{itemize}
-\item a
+\item A sinosoidal input gives rise to a sinosoidal output with the same frequency. The amplitude however, is modified in the process.
 \end{itemize}
 \item What is the definition of an LTI system?
 \begin{itemize}
-\item a
+\item An LTI system exhibits two behaviours:
+\begin{itemize}
+\item Time Invariance - The system must always behave the same between any two trials in time given that their starting conditions and inputs remain the same.
+\item Additive Superposition - By exciting the system via input $H\{a_1x_1(t)+a_2x_2(t)\}$,the output should return $a_1y_1(t)+a_2y_2(t))$ through linearity.
+\end{itemize}
 \end{itemize}
 \item What do the terms \emph{phase shift} and \emph{gain} mean?
 \begin{itemize}
-\item a
+\item Phase Shift is a mathematical offset that is observed graphically by horizontal shifting through the characteristic equation $y=Asin(B(x-C))+D$ which can be applied to all trigonometric functions.
+\item Gain is the ratio of the output with respect to the input. As it is unitless, it describes the factor at which a signal has been boosted or reduced with respect to its input.
 \end{itemize}
 \item How are the step and impulse response of system characterised?
 \begin{itemize}
-\item a
+\item Step response is characterised through two key theorems within a given LTI system, \emph{Initial Value Theorem} and \emph{Final Value Theorem}, which correspond to the simplifications $y_\gamma(0^+)=H(\infty)$ and $y_\gamma(\infty)=H(0)$.
+\item Impulse response is characterised through a short-duration time-domain signal. For continuous-time systems, this is the \emph{Dirac-delta function}, $\delta(t)$, while for discrete-time systems, this is the \emph{Kronecker-delta function}, $\delta[n]$; where $h(t)$ or $h[n]$ is defined as the output signal that results when an impulse is applied to the system's input, such that
+$$x[n]=\sum^{\infty}_{k=0}x[k]\delta[n-k]$$
+$$y[n]=\sum^{\infty}_{k=0}x[k]\delta[n-k]$$
 \end{itemize}
 \end{enumerate}
 
